@@ -16,25 +16,33 @@ export default function ToolCard() {
   href: "/tools/pdf-merger",
     },
     {
-      name: "PDF Splitter",
-      href: "/tools/pdf-splitter",
+  name: "PDF Splitter",
+  href: "/tools/pdf-splitter",
     },
     {
       name: "Word Counter",
       href: "/tools/word-counter",
     },
-    {
-      name: "QR Code Generator",
-      href: "/tools/qr-code-generator",
-    },
-    {
-      name: "JSON Formatter",
-      href: "/tools/json-formatter",
-    },
+   {
+  name: "QR Generator",
+  href: "/tools/qr-generator",
+},
+{
+  name: "JSON Formatter",
+  href: "/tools/json-formatter",
+},
     {
       name: "Base64 Encoder",
       href: "/tools/base64-encoder",
     },
+    {
+  name: "JSON Formatter",
+  href: "/tools/json-formatter",
+   },
+   {
+  name: "Password Generator",
+  href: "/tools/password-generator",
+  }
   ];
 
   return (
