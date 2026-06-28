@@ -12,28 +12,28 @@ export default function ToolCard() {
       href: "/tools/image-convertor",
     },
     {
-      name: "PDF Merger",
-      href: "#",
+  name: "PDF Merger",
+  href: "/tools/pdf-merger",
     },
     {
       name: "PDF Splitter",
-      href: "#",
+      href: "/tools/pdf-splitter",
     },
     {
       name: "Word Counter",
-      href: "#",
+      href: "/tools/word-counter",
     },
     {
       name: "QR Code Generator",
-      href: "#",
+      href: "/tools/qr-code-generator",
     },
     {
       name: "JSON Formatter",
-      href: "#",
+      href: "/tools/json-formatter",
     },
     {
       name: "Base64 Encoder",
-      href: "#",
+      href: "/tools/base64-encoder",
     },
   ];
 
