@@ -103,6 +103,18 @@ export default function ToolCard() {
   name: "JSON Validator",
   href: "/tools/json-validator",
 },
+{
+  name: "URL Parser",
+  href: "/tools/url-parser",
+},
+{
+  name: "HTML Minifier",
+  href: "/tools/html-minifier",
+},
+{
+  name: "XML Formatter",
+  href: "/tools/xml-formatter",
+},
 
   ];
 
