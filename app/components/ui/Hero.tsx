@@ -18,7 +18,7 @@ export default function Hero() {
         </span>
 
         {/* Heading */}
-        <h1 className="mt-8 max-w-6xl text-5xl font-extrabold leading-tight md:text-7xl lg:text-8xl">
+       <h1 className="mt-8 max-w-6xl text-center text-5xl font-extrabold leading-tight md:text-7xl lg:text-8xl">
           All Your
           <span className="block bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-500 bg-clip-text text-transparent">
             Online Tools
@@ -31,7 +31,7 @@ export default function Hero() {
           Access powerful PDF, Image, Text and Developer tools.
           Fast, secure and completely free to use directly in your browser.
         </p>
-        
+
 
         {/* Buttons */}
         <div className="mt-10 flex flex-wrap justify-center gap-4">
