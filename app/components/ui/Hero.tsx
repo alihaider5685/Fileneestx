@@ -10,21 +10,28 @@ export default function Hero() {
       <div className="absolute right-0 top-0 h-[300px] w-[300px] rounded-full bg-cyan-500/10 blur-[120px]" />
       <div className="absolute bottom-0 left-0 h-[250px] w-[250px] rounded-full bg-indigo-500/10 blur-[120px]" />
 
-      <div className="relative z-10 mx-auto flex min-h-[calc(100vh-80px)] max-w-7xl flex-col items-center justify-center py-20">
+   <div className="relative z-10 mx-auto flex min-h-[calc(100vh-80px)] w-full flex-col items-center justify-center py-20 text-center">
 
         {/* Badge */}
         <span className="rounded-full border border-blue-500/30 bg-blue-500/10 px-5 py-2 text-sm text-blue-400">
           🚀 28+ Free Online Tools
         </span>
 
-        {/* Heading */}
-       <h1 className="mt-8 max-w-6xl text-center text-5xl font-extrabold leading-tight md:text-7xl lg:text-8xl">
-          All Your
-          <span className="block bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-500 bg-clip-text text-transparent">
-            Online Tools
-          </span>
-          In One Place
-        </h1>
+       {/* Heading */}
+
+<h1 className="mx-auto mt-8 max-w-5xl text-center text-5xl font-extrabold leading-tight md:text-7xl lg:text-8xl">
+  All Your
+
+  <span className="block bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-500 bg-clip-text text-transparent">
+    Online Tools
+  </span>
+
+  In One Place
+</h1>
+
+<p className="mx-auto mt-8 max-w-3xl text-center text-lg leading-relaxed text-gray-400 md:text-xl">
+  
+</p>
 
         {/* Description */}
         <p className="mx-auto mt-8 max-w-3xl text-lg leading-relaxed text-gray-400 md:text-xl">
