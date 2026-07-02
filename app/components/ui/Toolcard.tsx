@@ -237,7 +237,7 @@ export default function ToolCard() {
       </div>
 
       {/* Tools Grid */}
-      <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6">
+      <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6">
 
         {tools.map((tool) => {
           const Icon = tool.icon;

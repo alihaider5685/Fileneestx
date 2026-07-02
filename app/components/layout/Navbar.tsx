@@ -1,63 +1,67 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+const navLinks = [
+  { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
+  { name: "FAQ", href: "/faq" },
+  { name: "Contact", href: "/contact" },
+  { name: "Tools", href: "/#tools" },
+];
 
 export default function Navbar() {
-  return (
-    <nav className="sticky top-0 z-50 w-full border-b border-white/10 bg-black/80 backdrop-blur-xl">
-      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
+  const pathname = usePathname();
 
+  return (
+    <nav className="sticky top-0 z-50 w-full border-b border-white/10 bg-black/75 backdrop-blur-2xl">
+      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
         {/* Logo */}
         <Link
           href="/"
-          className="text-3xl font-extrabold tracking-tight text-white"
+          className="select-none text-3xl font-extrabold tracking-tight transition duration-300 hover:scale-105"
         >
-          File<span className="text-blue-500">NestX</span>
+          <span className="text-white">File</span>
+          <span className="text-blue-500">NestX</span>
         </Link>
 
-        {/* Navigation */}
-        <div className="hidden items-center gap-8 text-sm font-medium text-gray-300 md:flex">
-          <Link
-            href="/"
-            className="transition hover:text-blue-400"
-          >
-            Home
-          </Link>
+        {/* Desktop Navigation */}
+        <div className="hidden items-center gap-8 md:flex">
+          {navLinks.map((link) => {
+            const isActive =
+              pathname === link.href ||
+              (link.href === "/#tools" && pathname === "/tools");
 
-          <Link
-            href="/about"
-            className="transition hover:text-blue-400"
-          >
-            About
-          </Link>
+            return (
+              <Link
+                key={link.name}
+                href={link.href}
+                className={`group relative text-sm font-medium transition-all duration-300 ${
+  isActive
+    ? "text-blue-500"
+    : "text-gray-300 hover:text-white"
+}`}
+              >
+                {link.name}
 
-          <Link
-            href="/faq"
-            className="transition hover:text-blue-400"
-          >
-            FAQ
-          </Link>
-
-          <Link
-            href="/contact"
-            className="transition hover:text-blue-400"
-          >
-            Contact
-          </Link>
-
-          <a
-            href="#tools"
-            className="transition hover:text-blue-400"
-          >
-            Tools
-          </a>
+                <span
+                  className={`absolute -bottom-2 left-0 h-0.5 rounded-full bg-blue-500 transition-all duration-300 ${
+                    isActive ? "w-full" : "w-0 group-hover:w-full"
+                  }`}
+                />
+              </Link>
+            );
+          })}
         </div>
 
-        {/* Button */}
-        <a
-          href="#tools"
-          className="rounded-xl bg-blue-600 px-5 py-3 font-semibold text-white transition duration-300 hover:bg-blue-700 hover:shadow-[0_0_25px_rgba(37,99,235,0.45)]"
+        {/* CTA Button */}
+        <Link
+          href="/#tools"
+          className="rounded-xl bg-gradient-to-r from-blue-600 to-blue-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-600/20 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-blue-500/40"
         >
           Explore Tools
-        </a>
+        </Link>
       </div>
     </nav>
   );
