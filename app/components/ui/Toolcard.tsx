@@ -221,54 +221,65 @@ export default function ToolCard() {
   ];
 
   return (
-    <section id="tools" className="bg-black px-6 py-24">
-      <div className="mx-auto max-w-7xl">
+  <section id="tools" className="bg-black px-6 py-24">
+    <div className="mx-auto max-w-7xl">
 
-        <div className="mb-16 text-center">
-          <h2 className="text-4xl font-bold text-white md:text-5xl">
-            Explore All Tools
-          </h2>
+      {/* Header */}
+      <div className="mb-16 text-center">
+        <h2 className="text-4xl font-bold text-white md:text-5xl">
+          Explore All Tools
+        </h2>
 
-          <p className="mx-auto mt-4 max-w-2xl text-gray-400">
-            Powerful online tools for PDFs, images,
-            text processing and developers.
-          </p>
-        </div>
+        <p className="mx-auto mt-4 max-w-2xl text-gray-400">
+          Powerful online tools for PDFs, images,
+          text processing and developers.
+        </p>
+      </div>
 
-      <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6">
-          {tools.map((tool) => {
-            const Icon = tool.icon;
+      {/* Tools Grid */}
+      <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6">
 
-            return (
-              <Link
-                key={tool.name}
-                href={tool.href}
-               className="group h-[190px]rounded-3xl border border-white/10 bg-gradient-to-b from-[#171717] to-[#0b0b0b] p-6 flex flex-col transition-all duration-300 hover:-translate-y-2 hover:border-blue-500 hover:shadow-[0_0_35px_rgba(37,99,235,0.25)]"
+        {tools.map((tool) => {
+          const Icon = tool.icon;
+
+          return (
+            <Link
+              key={tool.name}
+              href={tool.href}
+              className="group flex h-[190px] flex-col rounded-3xl border border-white/10 bg-gradient-to-b from-[#171717] to-[#0b0b0b] p-5 transition-all duration-300 hover:-translate-y-2 hover:border-blue-500 hover:shadow-[0_0_35px_rgba(37,99,235,0.25)]"
+            >
+              {/* Icon */}
+              <div
+                className={`mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br ${tool.color} shadow-lg`}
               >
-                <div
-                  className={`mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br ${tool.color}`}
-                >
-                  <Icon size={28} className="text-white" />
-                </div>
+                <Icon size={28} className="text-white" />
+              </div>
 
-                <h3 className="text-lg font-bold text-white">
-                  {tool.name}
-                </h3>
+              {/* Tool Name */}
+              <h3 className="text-base font-bold text-white">
+                {tool.name}
+              </h3>
 
-                <p className="mt-2 text-sm leading-relaxed text-gray-400">
-                  {tool.desc}
-                </p>
+              {/* Description */}
+              <p className="mt-2 text-sm leading-relaxed text-gray-400">
+                {tool.desc}
+              </p>
 
-                <div className="mt-auto inline-flex items-center gap-2 text-blue-400">
-                  Open Tool
-                  <ArrowRight size={16} />
-                </div>
-              </Link>
-            );
-          })}
-        </div>
+              {/* CTA */}
+              <div className="mt-auto inline-flex items-center gap-2 text-sm font-medium text-blue-400">
+                Open Tool
+                <ArrowRight
+                  size={16}
+                  className="transition-transform duration-300 group-hover:translate-x-1"
+                />
+              </div>
+            </Link>
+          );
+        })}
 
       </div>
-    </section>
-  );
+
+    </div>
+  </section>
+);
 }

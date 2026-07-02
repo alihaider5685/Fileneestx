@@ -14,7 +14,6 @@ export default function Home() {
     <>
       <Navbar />
       <Hero />
-      <CategoryCard />
       <ToolCard />
       <WhyChoose />
       <Stats />
